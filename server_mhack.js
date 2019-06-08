@@ -7,11 +7,11 @@ var url = require('url');
 var fileServer = new(static.Server)();
 
 var socketIO = require('socket.io');
-//var options = {
-//    key:    fs.readFileSync('/home/efagco5/ssl/keys/d52dc_31833_b67b5e1b6f81dd515857dfe38218fe36.key'),
-//    ca:   fs.readFileSync('/home/efagco5/ssl/certs/efagcollege_co_uk_d52dc_31833_1460728050_04d5ad08710420d3b4078a823eb4e06b.crt'),
-//    cert:     fs.readFileSync('/home/efagco5/ssl/certs/efagcollege_co_uk_d52dc_31833_1460764799_8af66608bfaba951af0c78f19f63fca3.crt')
-//};
+var options = {
+    key:    fs.readFileSync('/etc/ssl/certs/marlabsqbteam/marlabsqbteam.com.key'),
+    ca:   fs.readFileSync('/etc/ssl/certs/marlabsqbteam/marlabsqbteam.com.crt'),
+    cert:     fs.readFileSync('/etc/ssl/certs/marlabsqbteam/marlabsqbteam.com.crt')
+};
 
 var app = http.createServer(function (req, res) {
     res.writeHead(200, {"Content-Type": "text/plain"});
